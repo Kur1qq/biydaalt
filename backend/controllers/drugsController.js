@@ -1,14 +1,32 @@
 import Drugs from "../models/drugs.model.js"
 import mongoose from "mongoose";
 
-export const getDrugs = async(req, res) => {
+export const getDrugs = async (req, res) => {
     try {
         const drugs = await Drugs.find({});
-        res.status(200).json({success : true, data : drugs});
+        res.status(200).json({ success: true, data: drugs }); // Бүх эмийг буцаах
     } catch (error) {
-        console.log("error in fetching drug : ", error.message);
-        res.status(500).json({success : false, message : "server error"});
-    } 
+        console.log("Error in fetching drugs: ", error.message);
+        res.status(500).json({ success: false, message: "server error" });
+    }
+};
+
+export const searchDrugsByName = async (req, res) => {
+    try {
+        const { name } = req.query;  // Хайлтаар ирсэн нэр
+        if (!name) {
+            return res.status(400).json({ success: false, message: "Please provide a drug name" });
+        }
+
+        const drugs = await Drugs.find({
+            name: { $regex: name, $options: "i" }  // Бүтэн нэрээр хайх, case-insensitive
+        });
+
+        res.status(200).json({ success: true, data: drugs });
+    } catch (error) {
+        console.log("Error in searching drugs:", error.message);
+        res.status(500).json({ success: false, message: "server error" });
+    }
 };
 
 export const postDrugs = async(req, res) => {
