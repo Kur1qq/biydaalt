@@ -1,0 +1,24 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 400px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    padding-right: 45px;
+  }
+  
+  .search-button {
+    position: absolute;
+    right: calc(50% - 200px + 10px);
+  }

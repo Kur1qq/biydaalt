@@ -1,0 +1,72 @@
+/* DrugSearch.css */
+
+.drug-search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.drug-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.drug-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.drug-item {
+  background-color: #f9f9f9;
+  margin: 8px 0;
+  padding: 8px 12px; /* Жижигрүүлсэн, зүүн тал руу шахсан */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Зүүн талд байрлуулсан */
+  width: 100%; /* Container-ийн хэмжээтэй харьцуулсан */
+}
+
+.drug-name {
+  font-size: 1rem; /* Жижигрүүлсэн */
+  font-weight: bold;
+  color: #333;
+  margin: 0; /* Текстийн хооронд зайг багасгасан */
+}
+
+.drug-class,
+.drug-warnings,
+.drug-side-effect,
+.drug-description {
+  font-size: 0.85rem; /* Илүү жижигрүүлсэн */
+  color: #555;
+  margin: 3px 0; /* Текст хооронд зайг багасгасан */
+}
+
+.drug-class {
+  margin-top: 5px;
+}
+
+.drug-item:hover {
+  background-color: #e6f7e1;
+  cursor: pointer;
+}

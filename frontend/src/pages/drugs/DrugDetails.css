@@ -1,0 +1,116 @@
+.drug-details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+.drug-text {
+    flex: 1.5;
+    color: black;
+    text-align: left;
+}
+
+/* Зурагны тайлбар текстийг зурагны дээр байрлуулах CSS */
+/* Зурагны тайлбар текстийг карт дотор байрлуулах CSS */
+/* Зурагны тайлбар текстийг карт дотор байрлуулах CSS */
+.drug-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .drug-image-caption {
+    font-size: 15px;
+    font-weight: bold; /* Bold болгосон */
+    color: #000; /* Өнгийг хар болгосон */
+    background-color: #f9f9f9;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+  
+  .drug-image-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .drug-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+.drug-type {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field h3 {
+    font-size: 27px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
+}
+/* HTML: <div class="loader"></div> */
+/* DrugDetails.css */
+
+/* Loader container center + space from top */
+/* DrugDetails.css */
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ensure footer stays at bottom */
+  }
+  
+  .loader {
+    height: 60px;
+    aspect-ratio: 2/3;
+    --c:no-repeat linear-gradient(#0ea5e9 0 0); /* Changed to a visible blue */
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 50% 33.4%;
+    animation: l8 1.5s infinite linear;
+  }
+  
+  @keyframes l8 {
+    0%,
+    5%   {background-position:0 25%,100% 25%,0 75%,100% 75%}
+    33%  {background-position:0 50%,100% 0,0 100%,100% 50%}
+    66%  {background-position:0 50%,0 0,100% 100%,100% 50%}
+    95%,
+    100% {background-position:0 75%,0 25%,100% 75%,100% 25%}
+  }
+  
+  /* App.css */
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
