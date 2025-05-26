@@ -28,10 +28,27 @@ const drugSchema = new mongoose.Schema({
     drug_file: {
         type: String,
         required: true
-    }
+    },
+    uses_indications: {
+        type: String,
+        required: false
+    },
+    dosage_use: {
+        type: String,
+        required: false
+    },
 
+    Allergies_contraindications: {
+        type: String,
+        required: false
+    },
+
+    Manufacturer_nationlaty: {
+        type: String,
+        required: false
+    }
 }, {
-    timestamps: true 
+    timestamps: true
 });
 
 const Drugs = mongoose.model('Drugs', drugSchema);

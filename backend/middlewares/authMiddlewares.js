@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 const verifyToken = (req, res, next) => {
-  // Authorization header-ийг авна
   const token = req.header("Authorization")?.split(" ")[1];
 
   if (!token) {
@@ -8,10 +7,8 @@ const verifyToken = (req, res, next) => {
   }
 
   try {
-    // Токеныг баталгаажуулж, decode хийх
     const decoded = jwt.verify(token, 'your_secret_key');
     
-    // Токен баталгаажсан тохиолдолд хэрэглэгчийн мэдээллийг request-тай холбож өгнө
     req.user = decoded;
 
     next();  // Үргэлжлүүлнэ
